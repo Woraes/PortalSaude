@@ -46,7 +46,13 @@ class UbsChaperoA(TemplateView):
     template_name = 'ubschaperoa.html'
     
 class UbsEngenho(TemplateView):
-    template_name = 'ubsengenho.html'                  
+    template_name = 'ubsengenho.html' 
+
+class UbsMangueira(TemplateView):
+    template_name = 'ubsmangueira.html' 
+
+class UbsCalifornia(TemplateView):
+    template_name = 'ubscalifornia.html'                           
   
 
 

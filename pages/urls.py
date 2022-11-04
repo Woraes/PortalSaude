@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import Home, Manutencao, Sistemas, Esf, Manutencao, Ubs, UbsBrisamar, Secretaria, TeleMedicina, Hmsfx, Cpd
-from .views import UbsCentro, UbsChaperoA, UbsEngenho
+from .views import UbsCentro, UbsChaperoA, UbsEngenho, UbsMangueira, UbsCalifornia
 
 
 urlpatterns = [
@@ -16,5 +16,7 @@ urlpatterns = [
     path('ubscentro/', UbsCentro.as_view(), name='ubscentro'),
     path('ubschaperoa/', UbsChaperoA.as_view(), name='ubschaperoa'),
     path('ubsengenho/', UbsEngenho.as_view(), name='ubsengenho'),
+    path('ubsmangueira/', UbsMangueira.as_view(), name='ubsmangueira'),
+    path('ubscalifornia/', UbsCalifornia.as_view(), name='ubscalifornia'),
     path('cpd/', Cpd.as_view(), name='cpd'),
 ]
