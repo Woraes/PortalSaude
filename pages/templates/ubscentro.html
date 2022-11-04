@@ -1,0 +1,128 @@
+{% extends 'pages/modelo.html' %}
+{% load static %}
+
+
+
+
+{% block titulo %}
+
+<title>UBS Centro</title>
+
+{% endblock titulo %}
+
+
+
+
+{% block conteudo %}
+
+<div class="card bg-gradient-primary-to-secondary mt-0 "  align="center" id='pad' >
+    <h1>
+        Bem vindo a Unidade Basica de Saúde Centro
+    </h1>
+</div>
+
+
+
+<div class='card-deck mb-3 text-center'>
+    <div class='card mb-4 shadow-sm'>
+        <div class='card-header'>
+            <h4>Sistemas Utilizados</h4>
+        </div>
+  
+    </div>
+
+
+
+</div>
+
+
+
+
+    <!-- Mensagens de marketing e outras featurezinhas
+    ================================================== -->
+    <!-- Envolve o resto da página em outro container, para centralizar todo o conteúdo. -->
+
+    <div class="container marketing">
+
+      <!-- Três colunas de texto, abaixo do carousel -->
+      <div class="row">
+        <div class="col-lg-7 text-center" >
+          <img class="rounded-circle" src="{% static '/img/images/digital.gif'%}" alt="Generic placeholder image" width="140" height="140">
+          <h2>Ponto Biométrico</h2>
+          <p>Sistema de Gestão de Pontos</p>
+          <p><a target="a_blank" class="btn btn-info" href="https://inovarepontodigital.com.br/login" role="button">Acessar »</a></p>
+          <p><a  target="a_blank" class="btn btn-primary" href="https://inovarepontodigital.com.br/ponto?token=2e4f42ed57725c2a4fa88ab0b48789dac14f16027ea6912c4615164f646b8c94" role="button">Registro »</a></p>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="{% static '/img/images/prodig.gif'%}" alt="Generic placeholder image" width="140" height="140">
+            <h2>PRODIGI</h2>
+            <p>Sistema de Processos digitais e CIs</p>
+            <p><a target="a_blank" class="btn btn-info" href="http://prodigi/" role="button">Acessar »</a></p>
+          </div><!-- /.col-lg-4 -->
+         
+        
+  
+        
+
+
+      <!-- COMEÇAM AS MENCIONADAS FEATUREZINHAS xD -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Unidades de Saúde de Centro <span class="text-muted"></span></h2>
+          <p class="lead">Rua Gilson Braga, s/nº</p>
+          <p>Horário de Atendimento: 08 às 17h
+
+            Especialidades:
+            <ul>
+                <li> Clínica Médica</li>
+                <li>Ginecologia</li>
+                <li>Obstetrícia (Pré- Natal)</li>
+                <li>Pediatria</li>
+                <li>Puericultura</li>
+                <li>Fonoaudiologia</li>
+                <li>Fisioterapia</li>
+                <li>Odontologia</li>
+                <li>Psicologia</li>
+                <li>Nutrição</li>
+                <li>Planejamento Familiar</li>
+                <li>Acolhimento</li>
+                <li>Controle do Bolsa Família</li>
+                <li>Controle de Hipertensão e Diabetes (Programa HIPERDIA)</li>
+                <li>Programa de Controle ao Tabagismo</li>
+                <li>Curativo</li>
+                <li>Vacina</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="{% static '/img/images/unidades/ubscentro.png'%}" data-holder-rendered="true">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      
+
+      
+
+      <!-- /FIM DAS FEATUREZINHAS *-* -->
+
+    </div><!-- /.container -->
+
+
+  
+
+
+{% endblock conteudo %}
+
+{% block lista %}
+
+
+
+{% endblock lista %}
+
+

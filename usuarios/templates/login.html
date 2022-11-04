@@ -1,0 +1,59 @@
+{% extends 'pages/modelo.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+<title>Autenticação</title>
+
+
+{% block conteudo %}
+
+  {% if request.user.is_authenticated %}
+  <div class="card">
+    <h3><i class="bi bi-info-square">  </i> Ação não permitida a este usuário.</h3>
+
+    <div class="card-body">
+      
+      <p>
+        <strong>
+          Entre em contato com Suporte.
+        </strong>
+      </p>
+    </div>
+  </div>  
+  <a href="{% url 'home' %}" class="btn btn-primary" >Voltar</a>
+  
+  {% else %}
+<div class="card text-center  w-50 m-lg-auto p-3">
+    <div class="card-header p-2 bg-gradient-primary-to-secondary-2">
+      <h3 >Login</h3>
+    </div>
+    <div class="card-body justify-content-center">
+      <h5 class="card-title">Faça seu Login.</h5>
+      <form action="" method="post" class=" align-content-center m-2 w-25 m-lg-auto" >
+        {% csrf_token %}
+        
+        
+        {{form|crispy}}
+        </div>
+      
+      
+      <div class="button">
+      <button class="btn btn-primary" type="submit">Entrar</button>
+      <a class="btn btn-warning" href="{% url 'registrar'%}" >Suporte</a>
+      <hr>
+      <br>
+      
+      </div>
+      
+    </form>
+    </div>
+  </div>
+{% block lista %}
+{% endblock lista %}
+
+  {% endif %}
+{% endblock conteudo %}
+
+{% block rodape-links %}
+{%endblock%}

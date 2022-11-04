@@ -1,0 +1,348 @@
+{% extends 'pages/modelo.html' %}
+{% load static %}
+
+
+
+
+
+{% block carrossel %}
+
+
+{% endblock carrossel %}
+
+
+{%block conteudo%}
+
+<div>
+  <h1>
+    
+  </h1>
+</div>
+
+<div class="card mb-auto" align="center">
+  <div class="row featurette">
+    <div class="col-md-7 p-3">
+      <h2 class="featurette-heading"> <span class="text-muted"></span></h2>
+      <p class="lead text-capitalize"></p>
+    </div>
+    <div >
+      <ul class="p-1 m-3" style="display:Flex; justify-content:center; list-style: none;">
+        <li>
+          <a class='m-lg-2' href="https://vacinacaocovid19.saude.rj.gov.br/" target="_blank">	
+            <img  src="{% static '/img/images/banner_painel-coronavirus.png'%}">
+          </a>
+        </li>
+        <li>
+          <a class='m-lg-2' href="https://painel.saude.rj.gov.br/" target="_blank">	
+            <img  src="{% static '/img/images/covid19.png'%}">
+          </a>
+        </li>
+        <li>
+          <a class='m-lg-2' href="https://datastudio.google.com/reporting/bd212168-2f5b-49f3-b4e1-8529ffbc570a" target="_blank">	
+            <img  src="{% static '/img/images/monkey.jpg'%}">
+          </a>
+        </li>
+
+        <li>
+          <a class='m-lg-2' href="https://datastudio.google.com/reporting/94007569-a84c-4f67-8d8b-de559cc2922f" target="_blank">	
+            <img  src="{% static '/img/images/sarampo.jpg'%}">
+          </a>
+        </li>
+        <!-- <li>
+          <a href="https://agendamentotestecovid.saude.rj.gov.br/cadastro-exame" target="_blank">	
+            <img src="site/img/agendamento-covid.jpg">
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>  
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <!--Container-->
+  <div class="container ">
+      
+          <div class=" text-center pt-4 w-100 m-auto bg-gradient-primary-to-secondary-2 ">
+              <h1>Secretária de Saúde de Itaguaí</h1>
+              <p>Acompanhe as Notícias da Saúde</p>
+              <h4>Clique para saber mais</h4>
+          </div>
+     
+      
+      <!--Start code-->
+      <div class="row">
+          <div class="col-12 pb-5">
+              <!--SECTION START-->
+              <section class="row">
+                  <!--Start slider news-->
+                  <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+                      <div id="featured" class="carousel slide carousel" data-ride="carousel">
+                          <!--dots navigate-->
+                          <ol class="carousel-indicators top-indicator">
+                              <li data-target="#featured" data-slide-to="0" class="active"></li>
+                              <li data-target="#featured" data-slide-to="1"></li>
+                              <li data-target="#featured" data-slide-to="2"></li>
+                              <li data-target="#featured" data-slide-to="3"></li>
+                          </ol>
+                          
+                          <!--carousel inner-->
+                          <div class="carousel-inner">
+                              <!--Item slider-->
+                              <div class="carousel-item active">
+                                  <div class="card border-0 rounded-0 text-light overflow zoom">
+                                      <div class="position-relative">
+                                          <!--thumbnail img-->
+                                          <div class="ratio_left-cover-1 image-wrapper">
+                                              <a href="https://www.itaguai.rj.gov.br/caminhada-e-corrida-marcam-acao-do-outubro-rosa-em-itaguai/">
+                                                  <img class="img-fluid w-100"
+                                                       src="{% static 'img/images/22.jpeg'%}"
+                                                       alt="news template img1">
+                                              </a>
+                                          </div>
+                                          <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                              <!--title-->
+                                         
+                                              <!-- meta title -->
+                                              <div class="news-meta">
+                                                <a target="_blank" href="https://www.itaguai.rj.gov.br/caminhada-e-corrida-marcam-acao-do-outubro-rosa-em-itaguai/">
+                                                    <h2 class="h2 post-title text-white my-1">Caminhada e corrida marcam ação do Outubro Rosa em Itaguaí</h2>
+                                                </a>
+                                                <a  target="_blank" href="https://www.itaguai.rj.gov.br/caminhada-e-corrida-marcam-acao-do-outubro-rosa-em-itaguai/">
+                                                    
+                                                </a>
+                                                <span class="news-author"><a class="text-white font-weight-bold" href=""><a class="p-1 badge badge-primary rounded-0" target="_blank" href="https://www.itaguai.rj.gov.br/caminhada-e-corrida-marcam-acao-do-outubro-rosa-em-itaguai/">Acessar</a>
+                                                    <span class="news-date">03/11/2022</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!--Item slider-->
+                              <div class="carousel-item">
+                                  <div class="card border-0 rounded-0 text-light overflow zoom">
+                                      <div class="position-relative">
+                                          <!--thumbnail img-->
+                                          <div class="ratio_left-cover-1 image-wrapper">
+                                              <a href="https://www.itaguai.rj.gov.br/itaguai-abre-laboratorio-com-capacidade-para-35-mil-exames-de-sangue-por-mes/">
+                                                  <img class="img-fluid w-100"
+                                                  src="{% static 'img/images/23.jpeg'%}"
+                                                  alt="Bootstrap news theme">
+                                              </a>
+                                          </div>
+                                          <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                              <!--title-->
+                                              <a target="_blank" href="https://www.itaguai.rj.gov.br/itaguai-abre-laboratorio-com-capacidade-para-35-mil-exames-de-sangue-por-mes/">
+                                                  <h2 class="h3 post-title text-white my-1">Itaguaí abre laboratório com capacidade para 35 mil exames de sangue por mês</h2>
+                                              </a>
+                                              <!-- meta title -->
+                                              <div class="news-meta">
+                                                  <span class="news-author">
+                                                    <a class="text-white font-weight-bold" href="">
+                                                    <span class="news-author">
+                                                    <a class="text-white font-weight-bold" href="">
+                                                    <a class="p-1 badge badge-primary rounded-0" target="_blank" href="https://www.itaguai.rj.gov.br/itaguai-abre-laboratorio-com-capacidade-para-35-mil-exames-de-sangue-por-mes/">Acessar</a>
+                                                  </a></span>
+                                                  <span class="news-date">20/09/2022</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!--Item slider-->
+                              <div class="carousel-item">
+                                  <div class="card border-0 rounded-0 text-light overflow zoom">
+                                      <div class="position-relative">
+                                          <!--thumbnail img-->
+                                          <div class="ratio_left-cover-1 image-wrapper">
+                                              <a target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura-inicia-reforma-e-ampliacao-da-sede-do-samu-de-itaguai/">
+                                                  <img class="img-fluid w-100"
+                                                  src="{% static 'img/images/24.jpeg'%}"
+                                                       alt="Bootstrap blog template">
+                                              </a>
+                                          </div>
+                                          <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                              <!--title-->
+                                              <a target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura-inicia-reforma-e-ampliacao-da-sede-do-samu-de-itaguai/">
+                                                  <h2 class="h3 post-title text-white my-1">Prefeitura inicia reforma e ampliação da sede do Samu de Itaguaí</h2>
+                                              </a>
+                                              <!-- meta title -->
+                                              <div class="news-meta">
+                                                  <span class="news-author"><a class="text-white font-weight-bold" href=""><a class="p-1 badge badge-primary rounded-0" target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura/">Acessar</a>
+                                                  </a></span>
+                                                  <span class="news-date">12/06/2022</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!--Item slider-->
+                              <div class="carousel-item">
+                                  <div class="card border-0 rounded-0 text-light overflow zoom">
+                                      <div class="position-relative">
+                                          <!--thumbnail img-->
+                                          <div class="ratio_left-cover-1 image-wrapper">
+                                              <a target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura-entrega-primeira-uti-movel-neonatal-e-adulto-da-cidade/">
+                                                  <img class="img-fluid w-100"
+                                                  src="{% static 'img/images/25.jpg'%}"
+                                                       alt="Bootstrap portal template">
+                                              </a>
+                                          </div>
+                                          <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                              <!--title-->
+                                              <a target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura-entrega-primeira-uti-movel-neonatal-e-adulto-da-cidade/">
+                                                  <h2 class="h3 post-title text-white my-1">Prefeitura entrega primeira UTI móvel neonatal e adulto da cidade</h2>
+                                              </a>
+                                              <!-- meta title -->
+                                              <div class="news-meta">
+                                                <span class="news-author"><a class="text-white font-weight-bold" href=""><a class="p-1 badge badge-primary rounded-0" target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura-entrega-primeira-uti-movel-neonatal-e-adulto-da-cidade/">Acessar</a>
+                                                    <span class="news-date">23/06/2022</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--end item slider-->
+                          </div>
+                          <!--end carousel inner-->
+                      </div>
+                      
+                      <!--navigation-->
+                      <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                  </div>
+                  <!--End slider news-->
+                  
+                  <!--Start box news-->
+                  <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
+                      <div class="row">
+                          <!--news box-->
+                          <div class="col-6 pb-1 pt-0 pr-1">
+                              <div class="card border-0 rounded-0 text-white overflow zoom">
+                                  <div class="position-relative">
+                                      <!--thumbnail img1-->
+                                      <div class="ratio_right-cover-2 image-wrapper">
+                                          <a target="_blank" href="">
+                                              <img class="img-fluid"
+                                              src="{% static 'img/images/27.jpeg'%}"
+                                              alt="simple blog template img1">
+                                          </a>
+                                      </div>
+                                      <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                          <!-- category  -->
+                                          <a class="p-1 badge badge-primary rounded-0" href="https://www.itaguai.rj.gov.br/itaguai-recebe-modernos-ultrassons-portateis/">Acessar</a>
+  
+                                          <!--title-->
+                                          <a target="_blank" href="https://www.itaguai.rj.gov.br/itaguai-recebe-modernos-ultrassons-portateis/">
+                                              <h2 class="h5 text-white my-1">Itaguaí recebe modernos ultrassons portáteis</h2>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <!--news box-->
+                          <div class="col-6 pb-1 pl-1 pt-0">
+                              <div class="card border-0 rounded-0 text-white overflow zoom">
+                                  <div class="position-relative">
+                                      <!--thumbnail img-->
+                                      <div class="ratio_right-cover-2 image-wrapper">
+                                          <a href="https://www.itaguai.rj.gov.br/dia-d-da-campanha-nacional-de-multivacinacao-e-poliomielite-acontece-neste-sabado-20-08/">
+                                              <img class="img-fluid"
+                                              src="{% static 'img/images/28.jpeg'%}"
+                                                   alt="bootstrap templates for blog">
+                                          </a>
+                                      </div>
+                                      <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                          <!-- category -->
+                                          <a class="p-1 badge badge-primary rounded-0" href="https://www.itaguai.rj.gov.br/dia-d-da-campanha-nacional-de-multivacinacao-e-poliomielite-acontece-neste-sabado-20-08/">Dia D</a>
+                                          <!--title-->
+                                          <a href="https://www.itaguai.rj.gov.br/dia-d-da-campanha-nacional-de-multivacinacao-e-poliomielite-acontece-neste-sabado-20-08/">
+                                              <h2 class="h5 text-white my-1">Dia D da Campanha Nacional de Multivacinação e Poliomielite</h2>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <!--news box-->
+                          <div class="col-6 pb-1 pr-1 pt-1">
+                              <div class="card border-0 rounded-0 text-white overflow zoom">
+                                  <div class="position-relative">
+                                      <!--thumbnail img-->
+                                      <div class="ratio_right-cover-2 image-wrapper">
+                                          <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                              <img class="img-fluid"
+                                              src="{% static 'img/images/29.jpg'%}"
+                                                   alt="bootstrap blog wordpress theme">
+                                          </a>
+                                      </div>
+                                      <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                          <!-- category -->
+                                          <a class="p-1 badge badge-primary rounded-0" href="https://www.itaguai.rj.gov.br/prefeitura-inaugura-laboratorio-municipal-de-analises-clinicas/">HumanizaLab</a>
+                                          <!--title-->
+                                          <a href="https://www.itaguai.rj.gov.br/prefeitura-inaugura-laboratorio-municipal-de-analises-clinicas/">
+                                              <h2 class="h5 text-white my-1">Prefeitura inaugura Laboratório Municipal de Análises Clínicas</h2>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <!--news box-->
+                          <div class="col-6 pb-1 pl-1 pt-1">
+                              <div class="card border-0 rounded-0 text-white overflow zoom">
+                                  <div class="position-relative">
+                                      <!--thumbnail img-->
+                                      <div class="ratio_right-cover-2 image-wrapper">
+                                          <a target="_blank" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                              <img class="img-fluid"
+                                              src="{% static 'img/images/26.jpeg'%}"
+                                              alt="blog website templates bootstrap">
+                                          </a>
+                                      </div>
+                                      <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                          <!-- category -->
+                                          <a class="p-1 badge badge-primary rounded-0" target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura/">Saúde</a>
+                                          <!--title-->
+                                          <a target="_blank" href="https://www.itaguai.rj.gov.br/prefeitura/">
+                                              <h2 class="h5 text-white my-1">Prefeitura amplia oferta de exames na rede pública de saúde</h2>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--end news box-->
+                      </div>
+                  </div>
+                  <!--End box news-->
+              </section>
+              <!--END SECTION-->
+          </div>
+      </div>
+      <!--end code-->
+      
+      <div class="row mb-4">
+          <div class="col-12 text-center">
+              <p> Author: William Moraes <a target="_blank" href="{% url 'cpd' %}">CPD Saúde</a> | Secretário de Saúde Carlos Zoia</p>
+          </div>
+      </div>
+  </div>
+
+
+      
+{% endblock %}
+
+{% block lista %}
+
+{% endblock%}
+
+
+

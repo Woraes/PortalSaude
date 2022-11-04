@@ -1,0 +1,41 @@
+{% extends 'pages/modelo.html' %}
+{% load static %}
+
+
+
+{% block titulo %}
+<title>::SAMU::</title>
+
+{% endblock titulo %}
+
+
+
+
+
+{% block conteudo %}
+
+<div class="card bg-gradient-primary-to-secondary mt-0 "  align="center" id='pad' >
+    <h1>
+        Bem vindo ao Portal Saúde 
+    </h1>
+    <h3> Pagina em Dessenvolvimento</h3>
+    <a class="btn btn-primary mt-2 mb-5 mx-auto " href="{% url 'home'%}">Voltar</a>
+
+</div>
+<img src="{% static '/img/images/manutencao.gif'%}"  width='50%'  alt="">
+
+
+
+                
+
+
+
+
+
+{% endblock conteudo %}
+
+{% block lista %}
+
+
+
+{% endblock lista %}

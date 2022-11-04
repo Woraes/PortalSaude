@@ -1,0 +1,140 @@
+{% extends 'pages/modelo.html' %}
+{% load static %}
+
+
+
+
+{% block titulo %}
+
+<title>UBS Brisamar</title>
+
+{% endblock titulo %}
+
+
+
+
+{% block conteudo %}
+
+<div class="card bg-gradient-primary-to-secondary mt-0 "  align="center" id='pad' >
+    <h1>
+        Hospital Municipal São Francisco Xavier 
+    </h1>
+</div>
+
+
+
+<div class='card-deck mb-3 text-center'>
+    <div class='card mb-4 shadow-sm'>
+        <div class='card-header'>
+            <h4>Sistemas Utilizados</h4>
+        </div>
+  
+    </div>
+
+
+
+</div>
+
+
+
+
+    <!-- Mensagens de marketing e outras featurezinhas
+    ================================================== -->
+    <!-- Envolve o resto da página em outro container, para centralizar todo o conteúdo. -->
+
+    <div class="container marketing">
+
+      <!-- Três colunas de texto, abaixo do carousel -->
+      <div class="row">
+        <div class="col-lg-4 text-center" >
+            <img class="rounded-circle" src="{% static '/img/images/ghbamgif.gif'%}" alt="Generic placeholder image" width="140" height="140">
+            <h2>GHBAM</h2>
+            <p>Gestão Hospitalar de Boletim Atendimento Médico</p>
+            <p><a class="btn btn-info" href="http://ghbam/" role="button">Acessar »</a></p>
+          </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 text-center">
+                        <img class="rounded-circle" src="{% static '/img/images/pacsgif.gif'%}" alt="Generic placeholder image" width="140" height="140">
+                        <h2>PACS</h2>
+                        <p>Vizualizador de Tomografias e Raio-X</p>
+                        <p><a class="btn btn-info" href="http://pacs.itg.rio/" role="button">Acessar »</a></p>
+                      </div><!-- /.col-lg-4 -->
+                      <div class="col-lg-4 text-center">
+                        <img class="rounded-circle" src="{% static '/img/images/risgif.gif'%}" alt="Generic placeholder image" width="140" height="140">
+                        <h2>RIS</h2>
+                        <p>Sitema de Laudos Médicos</p>
+                        <p><a class="btn btn-info" href="http://ris.itg.rio/" role="button">Acessar »</a></p>
+                      </div><!-- /.col-lg-4 -->
+
+                      <hr class="featurette-divider">
+
+                      <div class="col-lg-4 text-center">
+                        <img class="rounded-circle" src="{% static '/img/images/prodig.gif'%}" alt="Generic placeholder image" width="140" height="140">
+                        <h2>PRODIGI</h2>
+                        <p>Sistema de Processos digitais e CIs</p>
+                        <p><a class="btn btn-info" href="http://prodigi/" role="button">Acessar »</a></p>
+                      </div>
+        
+                     
+        
+
+
+      <!-- COMEÇAM AS MENCIONADAS FEATUREZINHAS xD -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Hospital Municipal São Francisco Xavier<span class="text-muted"></span></h2>
+          <p class="lead">R. Gen. Bocaiúva, 16 – Centro, Itaguaí</p>
+          <p>Horário de Atendimento: 24h Emergência</p>
+
+            Especialidades:
+            <ul>
+                <li> Clínica Médica</li>
+                <li>Ginecologia</li>
+                <li>Obstetrícia (Pré- Natal)</li>
+                <li>Pediatria</li>
+                <li>Puericultura</li>
+                <li>Fonoaudiologia</li>
+                <li>Odontologia</li>
+                <li>Psicologia</li>
+                <li>Nutrição</li>
+                <li>Planejamento Familiar</li>
+                <li>Acolhimento</li>
+                <li>Controle do Bolsa Família</li>
+                <li>Controle de Hipertensão e Diabetes (Programa HIPERDIA)</li>
+                <li>Programa de Controle ao Tabagismo</li>
+                <li>Curativo</li>
+                <li>Vacina</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="{% static '/img/images/unidades/hospita.jpg'%}" data-holder-rendered="true">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      
+
+      
+
+      <!-- /FIM DAS FEATUREZINHAS *-* -->
+
+    </div><!-- /.container -->
+
+
+  
+
+
+{% endblock conteudo %}
+
+{% block lista %}
+
+
+
+{% endblock lista %}
+
+
