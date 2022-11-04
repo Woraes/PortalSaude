@@ -31,6 +31,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ['portalsaudeitaguai.herokuapp.com/','localhost']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
