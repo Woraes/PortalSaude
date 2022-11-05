@@ -26,6 +26,9 @@
       
       <div class="button">
       <button class="btn btn-primary" type="submit">{{botao}}</button>
+      {% if  user.perfil.nome %}
+      <a class="btn btn-primary" href="{% url 'home'%}">Voltar</a>
+      {% endif %}
       <hr>
       <br>
       

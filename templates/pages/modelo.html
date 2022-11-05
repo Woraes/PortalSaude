@@ -36,13 +36,18 @@
         {% block menu %}
         <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-md navbar-light position-relative bg-light shadow-sm" >
+        <nav class="navbar navbar-expand-lg navbar-light  bg-light shadow-sm" >
             <div class="container px-5">
-                <img src="{% static 'img/images/saude.gif'%}" class='iconepainel' width=8% alt="">
+                <img src="{% static 'img/images/saude.gif'%}" class='iconepainel ' width=100 alt="">
                 <a class="navbar-brand fw-bold" href="{% url 'home'%}">
                     
                 <h2>Portal Saúde</h2>
-                <p>Bem vindo</p></a>
+                {% if  user.perfil.nome %}
+                <p>Bem vindo ({{user.perfil.nome}})</p>
+                {% else %}
+                <p>Bem vindo</p>
+                {% endif %}
+            </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="bi-list"></i>
@@ -75,14 +80,14 @@
     </button>
     <ul class="dropdown-menu">
         <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="{% url 'secretaria' %}">Secretária de Saúde</a></li>
-      <li><a class="dropdown-item" href="{% url 'hmsfx' %}">Hospital municipal S.F.Xavier</a></li>
+      <li><a class="dropdown-item" href="{% url 'secretaria' %}"><i class="bi bi-hospital"><i class="bi bi-house-door"></i> Secretária de Saúde</a></li>
+      <li><a class="dropdown-item" href="{% url 'hmsfx' %}"><i class="bi bi-house"></i> Hospital municipal S.F.Xavier</a></li>
 
-      <li><a class="dropdown-item" href="{% url 'esf' %}">Estratégia Saúde da Família</a></li>
-      <li><a class="dropdown-item" href="{% url 'ubs' %}">Unidades Básicas de Saúde</a></li>
-      <li><a class="dropdown-item" href="">Especialidades</a></li>
+      <li><a class="dropdown-item" href="{% url 'esf' %}"><i class="bi bi-house"></i> Estratégia Saúde da Família</a></li>
+      <li><a class="dropdown-item" href="{% url 'ubs' %}"><i class="bi bi-house"></i> Unidades Básicas de Saúde</a></li>
+      <li><a class="dropdown-item" href=""><i class="bi bi-house"></i> Especialidades</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="{% url 'cpd' %}">Cpd Saúde</a></li>
+      <li><a class="dropdown-item" href="{% url 'cpd' %}"><i class="bi bi-mouse2-fill"></i> Cpd Saúde</a></li>
     </ul>
     <li><hr class="dropdown-divider"></li>
   </div>
@@ -110,12 +115,12 @@
             {% if request.user.is_authenticated %}
             <div class="btn-group dropstart" aria-labelledby="navbarDropdownMenuLink">
                 <button type="button" class="btn btn-primary rounded-pill px-4 me-2 mb-2 mb-lg-0" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-arrow-right-circle me-2"></i><span class="small">User</span>
+                    <i class="bi bi-arrow-right-circle me-2"></i><span class="small"> {{ request.user }}  {{user.groups.all.0.name }}</span>
                 </button>
                 <ul class="dropdown-menu">
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="{% url 'perfilupdate' %}"><i class="bi bi-clipboard-check"></i> Meus dados</a></li>
-                    <li><a class="dropdown-item" href="{% url 'hmsfx' %}"><i class="bi bi-exclamation-circle"></i> Alterar senha</a></li>
+                    <li><a class="dropdown-item" href=""><i class="bi bi-exclamation-circle"></i> Alterar senha</a></li>
                     <li><a class="dropdown-item" href="{% url 'registro' %}"><i class="bi bi-exclamation-circle"></i> Novo User</a></li>
 
                     <li><a class="dropdown-item" href="{% url 'paineladm' %}"><i class="bi bi-controller"></i> Painel ADM</a></li>
@@ -264,7 +269,7 @@
                       <div class="col-lg-4 text-center">
                         <img class="rounded-circle bg-dark" src="{% static '/img/images/alvara.gif'%}" alt="Generic placeholder image" width="140" height="140">
                         <h2>Web Controle</h2>
-                        <p>Alvará Vigilância Sanitária</p>
+                        <p>Alvará de licença da Vigilância Sanitária</p>
                         <p><a class="btn btn-info" href="http://192.168.10.91:8080/webControle/" role="button">Acessar »</a></p>
                       </div><!-- /.col-lg-4 -->
 
@@ -279,10 +284,11 @@
                       <div class="col-lg-4 text-center">
                         <img class="rounded-circle bg-dark" src="{% static '/img/images/telemedicina.gif'%}" alt="Generic placeholder image" width="140" height="140">
                         <h2>TeleMedicina</h2>
-                        <p>Atenção médica a pacientes e outros profissionais de saúde em locais distantes.</p>
+                        <p>Atenção médica a pacientes em locais distantes.</p>
                         <p><a class="btn btn-info" href="{% url 'telemedicina'%}" role="button">Acessar »</a></p>
                       </div><!-- /.col-lg-4 -->
 
+                      <hr class="featurette-divider">
 
                       <div class="col-lg-4 text-center">
                         <img class="rounded-circle bg-dark" src="{% static '/img/images/monitor.gif'%}" alt="Generic placeholder image" width="140" height="140">
