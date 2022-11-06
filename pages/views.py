@@ -52,7 +52,10 @@ class UbsMangueira(TemplateView):
     template_name = 'ubsmangueira.html' 
 
 class UbsCalifornia(TemplateView):
-    template_name = 'ubscalifornia.html'                           
+    template_name = 'ubscalifornia.html'
+    
+class UbsVilaGeny(TemplateView):
+    template_name = 'ubsvilageny.html'                                 
   
 
 
