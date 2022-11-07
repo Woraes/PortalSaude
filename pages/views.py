@@ -32,7 +32,10 @@ class Ubs(TemplateView):
     
 
 class Manutencao(TemplateView):
-    template_name = 'manutencao.html'   
+    template_name = 'manutencao.html'
+    
+class Especialidades(TemplateView):
+    template_name = 'especialidades.html'       
     
     
     
