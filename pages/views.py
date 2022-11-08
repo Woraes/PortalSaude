@@ -62,6 +62,26 @@ class UbsVilaGeny(TemplateView):
   
 
 
+
+class EsfPiranema(TemplateView):
+    template_name = 'esfpiranema.html' 
+    
+class EsfOdenit(TemplateView):
+    template_name = 'esfodenit.html' 
+    
+class EsfChaperob(TemplateView):
+    template_name = 'esfchaperob.html'
+
+class EsfCoroa(TemplateView):
+    template_name = 'esfcoroa.html'  
+
+class EsfSanta(TemplateView):
+    template_name = 'esfsanta.html'                    
+    
+    
+    
+    
+
 class TeleMedicina(TemplateView):
     template_name = 'telemedicina.html'  
     
