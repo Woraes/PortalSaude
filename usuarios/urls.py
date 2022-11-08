@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from .views import UsuarioNew, PainelAdm, UsuarioList, PerfilUpdate, PortalSaude, Registrar
+from .views import UsuarioNew, PainelAdm, UsuarioList, UsuarioUpdate, PortalSaude, Registrar, UsuarioDelete
 
 
 
@@ -16,7 +16,8 @@ urlpatterns = [
     path('registro/', UsuarioNew.as_view(), name='registro'),
     path('admin/', PainelAdm.as_view(), name='paineladm'),
     path('adminlist/', UsuarioList.as_view(), name='adminlist'),
-    path('perfilupdate/',  PerfilUpdate.as_view(), name='perfilupdate'),
+    path('update/<int:pk>',  UsuarioUpdate.as_view(), name='usuario_update'),
+    path('delete/<int:pk>',  UsuarioDelete.as_view(), name='usuario_delete'),
     path('portal/', PortalSaude.as_view(), name='portal_saude'),
     path('registrar/', Registrar.as_view(), name='registrar'),   
     

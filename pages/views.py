@@ -83,10 +83,22 @@ class EsfSanta(TemplateView):
     
 
 class TeleMedicina(TemplateView):
-    template_name = 'telemedicina.html'  
+    template_name = 'telemedicina.html'
+    
+    
+      
     
  
    
 class Cpd( LoginRequiredMixin,TemplateView):
     login_url = reverse_lazy('login')
-    template_name = 'cpd.html'          
+    template_name = 'cpd.html'     
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        
+        context['unidade'] = 'Cpd Saúde'
+        context['botao'] = 'Salvar'
+        context['descri'] = 'Complete seu cadastro'
+        
+        return context     

@@ -1,4 +1,4 @@
-{% extends 'pages/modelo-sis.html' %}
+{% extends 'pages/modelo.html' %}
 {% load static %}
 
 {%block titulo%} 
@@ -13,24 +13,29 @@
     <div class="card-body">
       <p class="card-text"><h4>Lista de Usuários no Sistema </h4></p>
    
-      {% comment %} <a href="{% url 'pessoa_new'%}" class="btn btn-primary"><i class="bi bi-file-earmark-plus-fill"></i> Cadastrar</a>
-      <a href="{% url 'pessoa_new'%}" class="btn btn-primary"><i class="bi bi-file-earmark-plus-fill"></i> Gerar Lista</a> {% endcomment %}
+     <a href="{% url 'registro'%}" class="btn btn-primary"><i class="bi bi-file-earmark-plus-fill"></i> Cadastrar</a>
+      
   
     </div>
     <div class="table-responsive-lg">
         <table class="table table-striped">
             <tr>
-                <th>Nome </th>
-                <th>Telefone</th>
-                <th>Opções</th>
+                <th>Nick:</th>
+                <th>Nome:</th>
+                <th>Telefone:</th>
+                <th>Grupo:</th>
+                <th>Opções:</th>
             </tr>
             {%for usuario in object_list %}
             <tr>
-                <td>{{username}}</td>
+                <td>{{usuario.usuario}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.telefone}}</td>
                 <td>{{user.groups}}</td>
+                
                 <td>
-                    {% comment %} <a href="{% url 'pessoa_update' pessoa.id %}"class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                    <a href="{% url 'pessoa_delete' pessoa.id%}"class="btn btn-danger" ><i class="bi bi-trash"></i></a>                  {% endcomment %}
+                   <a href="{% url 'usuario_update' usuario.id %}"class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                    <a href="{% url 'usuario_delete' usuario.id%}"class="btn btn-danger" ><i class="bi bi-trash"></i></a>                  
                 </td>
                 <td>{{teste}}</td>
             </tr>
@@ -46,3 +51,6 @@
 
 </div>  
 {% endblock %}    
+
+{% block lista %}
+{% endblock lista %}

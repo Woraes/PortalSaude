@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from braces.views import GroupRequiredMixin
 from .form import UsuarioForm
 from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DeleteView
 from .models import Perfil, User
 
 
@@ -18,7 +18,7 @@ from .models import Perfil, User
 class UsuarioList(GroupRequiredMixin ,LoginRequiredMixin, ListView):
     login_url = reverse_lazy('login')
     group_required = u'ADM'
-    model = User
+    model = Perfil
     template_name = 'usuariolist.html'
 
 
@@ -62,12 +62,14 @@ class UsuarioNew(GroupRequiredMixin ,LoginRequiredMixin, CreateView):
         context['titulo'] = 'Criar Usuário'
         context['botao'] = 'Salvar'
         context['descri'] = 'Bem Vindo Crie o Usuário'
+        context['sair'] = 'sair'
         
         return context
     
     
-class PerfilUpdate(UpdateView):
-    template_name = 'form.html'
+class UsuarioUpdate(GroupRequiredMixin, LoginRequiredMixin, UpdateView):
+    login_url = reverse_lazy('login')
+    group_required = u'ADM',
     model = Perfil
     fields = ['nome',
               'cpf',
@@ -75,7 +77,8 @@ class PerfilUpdate(UpdateView):
               'email',
               'cep',
               ]
-    success_url = reverse_lazy('home')
+    template_name = 'form.html'
+    success_url = reverse_lazy('adminlist')
     
     def get_object(self, queryset=None):
         self.object = get_object_or_404(Perfil, usuario=self.request.user)
@@ -93,7 +96,17 @@ class PerfilUpdate(UpdateView):
         
         return context
     
-       
+ 
+class UsuarioDelete(GroupRequiredMixin ,LoginRequiredMixin, DeleteView):
+    login_url = reverse_lazy('login')
+    group_required = u'ADM'
+    model = Perfil
+    template_name = 'usuariodelete.html'
+    success_url = reverse_lazy('adminlist')
+    
+    # def get_object(self, queryset=None):
+    #     self.object = get_object_or_404(Perfil, pk=self.kwargs['pk'], criadopor=self.request.user) 
+    #     return self.object      
 
 class PainelAdm(GroupRequiredMixin ,LoginRequiredMixin,CreateView):
     login_url = reverse_lazy('login')

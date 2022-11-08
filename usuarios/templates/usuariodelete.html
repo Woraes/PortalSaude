@@ -1,0 +1,40 @@
+{% extends 'pages/modelo.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{%block titulo%} <title>Deletar Pessoa</title>{% endblock %}  
+
+
+{%block conteudo%}
+<h1>Deletar o Registro dessa Pessoa ? 
+<h3>Nome: ({{usuario.usuario}}) </h3>
+<br>
+<h3>Telefone: {{usuario.telefone}}</h3>
+<br>
+<h6>Deseja confirmar para deletar ?</h6>
+
+<form method='post' enctype='multipart/form-data'>
+    {% csrf_token %}
+    
+
+
+    <button type="submit" class="btn btn-warning">Confirmar</button> 
+    <a href="{%url 'adminlist'%}" class="btn btn-dark">Cancelar</a></button>  
+</form>
+
+
+
+   
+
+
+
+
+
+
+{% endblock %}   
+
+{% block lista %}{% endblock lista %}
+    
+
+
