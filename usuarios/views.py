@@ -9,6 +9,14 @@ from .form import UsuarioForm
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView, DeleteView
 from .models import Perfil, User
+import os
+import platform
+
+
+
+
+
+
 
 
 
@@ -20,8 +28,8 @@ class UsuarioList(GroupRequiredMixin ,LoginRequiredMixin, ListView):
     group_required = u'ADM'
     model = Perfil
     template_name = 'usuariolist.html'
-
-
+    
+  
 
 
 
@@ -91,6 +99,36 @@ class UsuarioUpdate(GroupRequiredMixin, LoginRequiredMixin, UpdateView):
         context = super().get_context_data(*args, **kwargs)
         
         context['titulo'] = 'Editar Usuario'
+        context['botao'] = 'Salvar'
+        context['descri'] = 'Complete seu cadastro'
+        
+        return context
+    
+    
+class UsuarioDados(GroupRequiredMixin, LoginRequiredMixin, UpdateView):
+    login_url = reverse_lazy('login')
+    group_required = u'ADM',
+    model = Perfil
+    fields = ['nome',
+              'cpf',
+              'telefone',
+              'email',
+              'cep',
+              ]
+    template_name = 'form.html'
+    success_url = reverse_lazy('adminlist')
+    
+    def get_object(self, queryset=None):
+        self.object = get_object_or_404(Perfil, usuario=self.request.user)
+        return self.object
+    
+    
+        
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        
+        context['titulo'] = 'Cadastro'
         context['botao'] = 'Salvar'
         context['descri'] = 'Complete seu cadastro'
         

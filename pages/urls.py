@@ -1,8 +1,8 @@
 from django.urls import path
 from .views import Home, Manutencao, Sistemas, Esf, Manutencao, Ubs, UbsBrisamar, Secretaria, TeleMedicina, Hmsfx, Cpd
 from .views import UbsCentro, UbsChaperoA, UbsEngenho, UbsMangueira, UbsCalifornia, UbsVilaGeny, Especialidades
-from .views import EsfPiranema, EsfOdenit, EsfChaperob, EsfCoroa, EsfSanta
-
+from .views import EsfPiranema, EsfOdenit, EsfChaperob, EsfCoroa, EsfSanta, Teste
+from .views import Sistema
 urlpatterns = [
     path('', Home.as_view(), name='home'),
     path('sistemas/', Sistemas.as_view(), name='sistemas'),
@@ -26,4 +26,6 @@ urlpatterns = [
     path('esfcoroa/', EsfCoroa.as_view(), name='esfcoroa'),
     path('esfsanta/', EsfSanta.as_view(), name='esfsanta'),
     path('cpd/', Cpd.as_view(), name='cpd'),
+    path('teste/', Sistema , name='teste'),
+    
 ]

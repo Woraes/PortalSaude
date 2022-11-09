@@ -8,9 +8,17 @@
 
 {%block conteudo%}
 <h1>Deletar o Registro dessa Pessoa ? 
-<h3>Nome: ({{usuario.usuario}}) </h3>
+    {% if perfil.nome  %}
+<h3>Nome: ({{perfil.nome}}) </h3>
+{% else %}
+<h3>Nome: ({{user.username}}) </h3>
+{% endif %}
 <br>
-<h3>Telefone: {{usuario.telefone}}</h3>
+{% if  perfil.nome %}
+<h3>Telefone: {{perfil.telefone}} </h3>
+{% else %}
+<h3>Email: {{user.email}}</h3>
+{% endif %}
 <br>
 <h6>Deseja confirmar para deletar ?</h6>
 

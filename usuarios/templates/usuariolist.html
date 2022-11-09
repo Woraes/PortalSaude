@@ -31,7 +31,7 @@
                 <td>{{usuario.usuario}}</td>
                 <td>{{usuario.nome}}</td>
                 <td>{{usuario.telefone}}</td>
-                <td>{{user.groups}}</td>
+                <td>{{user.groups.all.0.name}}</td>
                 
                 <td>
                    <a href="{% url 'usuario_update' usuario.id %}"class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>

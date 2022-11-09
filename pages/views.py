@@ -2,9 +2,30 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+import os
+import platform
+import socket
 
 # Create your views here.
+
+
+
+
+class Teste(TemplateView):
+    template_name = 'cpd.html'
+  
+  
+  
+    
+def Sistema(request):
+        nome = os.name
+        print(nome)
+        sis = platform.system()
+        print(sis)
+        context = sis
+        iplocal = socket.gethostbyname(socket.gethostname())
+        return render(request, 'cpd.html', {'context': context, 'sis': sis, 'nome': nome, 'iplocal': iplocal})
+
 
 
 class Home(TemplateView):
