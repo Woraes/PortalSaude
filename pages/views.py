@@ -97,7 +97,10 @@ class EsfCoroa(TemplateView):
     template_name = 'esfcoroa.html'  
 
 class EsfSanta(TemplateView):
-    template_name = 'esfsanta.html'                    
+    template_name = 'esfsanta.html' 
+
+class EsfIlhaDaMadeira(TemplateView):
+    template_name = 'esfilha.html'                         
     
     
     
