@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import Home, Manutencao, Sistemas, Esf, Manutencao, Ubs, UbsBrisamar, Secretaria, TeleMedicina, Hmsfx, Cpd
-from .views import UbsCentro, UbsChaperoA, UbsEngenho, UbsMangueira, UbsCalifornia, UbsVilaGeny, Especialidades
-from .views import EsfPiranema, EsfOdenit, EsfChaperob, EsfCoroa, EsfSanta, EsfIlhaDaMadeira
+from .views import UbsCentro, UbsChaperoA, UbsEngenho, UbsMangueira, UbsCalifornia, UbsVilaGeny, UbsVilaMargarida, UbsVistaAlegre, Especialidades
+from .views import EsfPiranema, EsfOdenit, EsfChaperob, EsfCoroa, EsfSanta, EsfIlhaDaMadeira, EsfJardim, EsfMazomba, EsfSaco
 from .views import Sistema
 urlpatterns = [
     path('', Home.as_view(), name='home'),
@@ -20,12 +20,17 @@ urlpatterns = [
     path('ubsmangueira/', UbsMangueira.as_view(), name='ubsmangueira'),
     path('ubscalifornia/', UbsCalifornia.as_view(), name='ubscalifornia'),
     path('ubsvilageny/', UbsVilaGeny.as_view(), name='ubsvilageny'),
+    path('ubsvilamargarida/', UbsVilaMargarida.as_view(), name='ubsvilamargarida'),
+    path('ubsvistaalegre/', UbsVistaAlegre.as_view(), name='ubsvistaalegre'),
     path('esfpiranema/', EsfPiranema.as_view(), name='esfpiranema'),
     path('esfodenit/', EsfOdenit.as_view(), name='esfodenit'),
     path('esfchaperob/', EsfChaperob.as_view(), name='esfchaperob'),
     path('esfcoroa/', EsfCoroa.as_view(), name='esfcoroa'),
     path('esfsanta/', EsfSanta.as_view(), name='esfsanta'),
     path('esfilha/', EsfIlhaDaMadeira.as_view(), name='esfilha'),
+    path('esfjardim/', EsfJardim.as_view(), name='esfjardim'),
+    path('esfmazomba/', EsfMazomba.as_view(), name='esfmazomba'),
+    path('esfsaco/', EsfSaco.as_view(), name='esfsaco'),
     path('cpd/', Cpd.as_view(), name='cpd'),
     path('teste/', Sistema , name='teste'),
     

@@ -79,8 +79,13 @@ class UbsCalifornia(TemplateView):
     template_name = 'ubscalifornia.html'
     
 class UbsVilaGeny(TemplateView):
-    template_name = 'ubsvilageny.html'                                 
-  
+    template_name = 'ubsvilageny.html'  
+                                   
+class UbsVilaMargarida(TemplateView):
+    template_name = 'ubsvilamargarida.html' 
+    
+class UbsVistaAlegre(TemplateView):
+    template_name = 'ubsvistaalegre.html'       
 
 
 
@@ -102,7 +107,16 @@ class EsfSanta(TemplateView):
 class EsfIlhaDaMadeira(TemplateView):
     template_name = 'esfilha.html'                         
     
+class EsfJardim(TemplateView):
+    template_name = 'esfjardim.html'
     
+class EsfMazomba(TemplateView):
+    template_name = 'esfmazomba.html' 
+
+class EsfSaco(TemplateView):
+    template_name = 'esfsaco.html'          
+
+      
     
     
 
