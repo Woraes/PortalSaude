@@ -3,6 +3,12 @@ from .views import Home, Manutencao, Sistemas, Esf, Manutencao, Ubs, UbsBrisamar
 from .views import UbsCentro, UbsChaperoA, UbsEngenho, UbsMangueira, UbsCalifornia, UbsVilaGeny, UbsVilaMargarida, UbsVistaAlegre, Especialidades
 from .views import EsfPiranema, EsfOdenit, EsfChaperob, EsfCoroa, EsfSanta, EsfIlhaDaMadeira, EsfJardim, EsfMazomba, EsfSaco
 from .views import Sistema
+from .views import VigilanciaEmSaude
+
+
+
+
+
 urlpatterns = [
     path('', Home.as_view(), name='home'),
     path('sistemas/', Sistemas.as_view(), name='sistemas'),
@@ -31,6 +37,7 @@ urlpatterns = [
     path('esfjardim/', EsfJardim.as_view(), name='esfjardim'),
     path('esfmazomba/', EsfMazomba.as_view(), name='esfmazomba'),
     path('esfsaco/', EsfSaco.as_view(), name='esfsaco'),
+    path('vigilanciaemsaude/', VigilanciaEmSaude.as_view(), name='vigilanciaemsaude'),
     path('cpd/', Cpd.as_view(), name='cpd'),
     path('teste/', Sistema , name='teste'),
     

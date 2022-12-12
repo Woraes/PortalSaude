@@ -117,7 +117,9 @@ class EsfSaco(TemplateView):
     template_name = 'esfsaco.html'          
 
       
-    
+#ESPECIALIDADES
+class VigilanciaEmSaude(TemplateView):
+    template_name = 'vigilanciaemsaude.html'     
     
 
 class TeleMedicina(TemplateView):
