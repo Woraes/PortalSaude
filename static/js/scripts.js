@@ -7,6 +7,8 @@
 // Scripts
 // 
 
+$('.modal').modal();
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -28,6 +30,8 @@ window.addEventListener('DOMContentLoaded', event => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
             }
+
+            
         });
     });
 

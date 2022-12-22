@@ -15,6 +15,42 @@
 
 {% block conteudo %}
 
+<div class="modal " id="exampleModalToggle" aria-hidden="true" aria-labelledby="" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Avisos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {% comment %} <img src="{% static '/img/images/digital.gif' %}" alt=""> {% endcomment %}
+        <img src="https://www.instagram.com/p/CmNnWpFj5Mn/" alt="">
+        
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Hide this modal and show the first with the button below.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn btn-primary align-content-center" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Avisos</a>
+
 <div class="card bg-gradient-primary-to-secondary mt-0 "  align="center" id='pad' >
     <h1>
         Hospital Municipal São Francisco Xavier 
@@ -94,7 +130,7 @@
                         <img class="rounded-circle bg-dark" src="{% static '/img/images/escalaweb.gif'%}" alt="Generic placeholder image" width="140" height="140">
                         <h2>Escala Web</h2>
                         <p>Gestão de Escala</p>
-                        <p><a class="btn btn-info" href="https://192.168.10.91:8484" role="button">Acessar »</a></p>
+                        <p><a class="btn btn-info" href="http://192.168.10.91:8484" role="button">Acessar »</a></p>
                       </div><!-- /.col-lg-4 -->
 
                       <div class="col-lg-4 text-center" >
@@ -144,8 +180,24 @@
       <hr class="featurette-divider">
 
       
-
-      
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- remova o comentário da linha de baixo se quiser um título na imagem -->
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                &times;
+              </button>
+            </div>
+            
+            <div class="modal-body">
+              <!-- você pode encapsular a tag img com um link se qusier que a imagem possa ser clicada -->
+              <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div> 
 
       <!-- /FIM DAS FEATUREZINHAS *-* -->
 

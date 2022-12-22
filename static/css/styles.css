@@ -70,6 +70,31 @@
   box-sizing: border-box;
 }
 
+.modal-body {
+  padding: 0; /* remova se quiser bordas */
+}
+
+/* remova se quiser um header com título */
+.modal-header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  border: none; /* remova se quiser uma linha de separação*/
+}
+
+/* remova se quiser botão padrão */
+.modal-header .close {
+  background: rgba(0,0,0,0.5);
+  margin: 5px 5px 5px auto;
+  border-radius: 100%;
+  padding: 6px 13px 14px 13px;
+}
+
+/* remova se quiser o fundo transparente padrão */
+.modal-backdrop {
+     background-color: rgba(0,0,0,.0001) !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
